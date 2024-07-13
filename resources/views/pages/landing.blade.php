@@ -122,7 +122,7 @@
                         <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
                             <div class="text-center lg:text-left mt-6 lg:mt-0">
                                 <div class="mb-12">
-                                    <h1 class="text-4xl leading-normal text-black font-bold mb-4">
+                                    <h1 class="text-3xl leading-normal text-black font-bold mb-4">
                                         {{ $hero->title }}<br>
                                         <span data-toggle="typed"
                                             data-options='{"strings": {{ $hero->services = json_encode($hero->services) }} }'></span>
