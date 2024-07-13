@@ -100,7 +100,7 @@ class HeroResource extends Resource
 
     public static function canCreate(): bool
     {
-        return Setting::count() < 1;
+        return Hero::count() < 1;
     }
 
     public static function getNavigationBadge(): ?string
