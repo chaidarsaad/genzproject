@@ -37,7 +37,7 @@ class ServiceResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->image()
                                     ->required()
-                                    ->acceptedFileTypes(['image/svg+xml', 'image/png', 'image/jpg']),
+                                    ->acceptedFileTypes(['image/svg+xml', 'image/png', 'image/jpg', 'image/jpeg']),
                             ])
                     ]),
                 Forms\Components\Group::make()
