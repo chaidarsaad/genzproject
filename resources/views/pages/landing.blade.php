@@ -273,7 +273,7 @@
                     <!-- End heading -->
                 </div>
                 <div class="container xl:max-w-6xl mx-auto px-4">
-                    <div class="lex flex-wrap flex-row -mx-4 justify-center">
+                    <div class="flex flex-wrap flex-row -mx-4 justify-center">
                         <div class="w-full px-4">
                             <!-- slider client -->
                             <div id="post-carousel" class="navslider-hover splide post-carousel">
