@@ -84,10 +84,12 @@
                                 <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#portfolio">Our
                                     works</a>
                             </li>
-                            <li class="relative hover:text-black">
-                                <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent"
-                                    href="#clients">Clients</a>
-                            </li>
+                            @if ($clients->isNotEmpty())
+                                <li class="relative hover:text-black">
+                                    <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent"
+                                        href="#clients">Clients</a>
+                                </li>
+                            @endif
                             <li class="relative hover:text-black">
                                 <a class="block py-3 lg:py-7 px-6 border-b-2 border-transparent" href="#team">Team</a>
                             </li>
