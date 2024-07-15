@@ -20,7 +20,7 @@ class LandingController extends Controller
         $clients = Client::all();
         $teams = Team::all();
         $portofolios = Portofolio::all();
-        $heros = Hero::all();
+        $hero = Hero::first();
         $setting = Setting::orderBy('id', 'desc')->first();
 
         return view('pages.landing', [
@@ -28,7 +28,7 @@ class LandingController extends Controller
             'teams' => $teams,
             'clients' => $clients,
             'portofolios' => $portofolios,
-            'heros' => $heros,
+            'hero' => $hero,
             'setting' => $setting,
         ]);
     }
