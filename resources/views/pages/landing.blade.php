@@ -47,8 +47,7 @@
                         <!-- mobile nav -->
                         <div class="flex flex-row items-center py-4 lg:py-0">
                             <div class="relative text-gray-900 hover:text-black block lg:hidden">
-                                <button type="button"
-                                    class="menu-mobile block py-3 px-6 border-b-2 border-transparent">
+                                <button type="button" class="menu-mobile block py-3 border-b-2 border-transparent">
                                     <span class="sr-only">Mobile menu</span>
                                     <svg class="open h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
