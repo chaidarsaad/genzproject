@@ -65,7 +65,7 @@ class ContactResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('phone_number')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('subject')
+                Tables\Columns\TextColumn::make('service')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('message')
                     ->searchable(),
