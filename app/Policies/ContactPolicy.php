@@ -63,7 +63,7 @@ class ContactPolicy
      */
     public function forceDelete(User $user, Contact $contact): bool
     {
-        return $user->can('force_delete_contact');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class ContactPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_contact');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class ContactPolicy
      */
     public function restore(User $user, Contact $contact): bool
     {
-        return $user->can('restore_contact');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class ContactPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_contact');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class ContactPolicy
      */
     public function replicate(User $user, Contact $contact): bool
     {
-        return $user->can('replicate_contact');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class ContactPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_contact');
+        return $user->can('{{ Reorder }}');
     }
 }

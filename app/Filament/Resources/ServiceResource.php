@@ -45,6 +45,8 @@ class ServiceResource extends Resource
                         Forms\Components\Section::make()
                             ->schema([
                                 Forms\Components\Textarea::make('subtitle')
+                                    ->rows(6)
+                                    ->cols(20)
                                     ->required()
                                     ->columnSpanFull(),
                             ])

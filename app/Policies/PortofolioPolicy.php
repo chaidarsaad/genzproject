@@ -63,7 +63,7 @@ class PortofolioPolicy
      */
     public function forceDelete(User $user, Portofolio $portofolio): bool
     {
-        return $user->can('force_delete_portofolio');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class PortofolioPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_portofolio');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class PortofolioPolicy
      */
     public function restore(User $user, Portofolio $portofolio): bool
     {
-        return $user->can('restore_portofolio');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class PortofolioPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_portofolio');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class PortofolioPolicy
      */
     public function replicate(User $user, Portofolio $portofolio): bool
     {
-        return $user->can('replicate_portofolio');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class PortofolioPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_portofolio');
+        return $user->can('{{ Reorder }}');
     }
 }

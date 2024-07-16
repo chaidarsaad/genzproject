@@ -63,7 +63,7 @@ class HeroPolicy
      */
     public function forceDelete(User $user, Hero $hero): bool
     {
-        return $user->can('force_delete_hero');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class HeroPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_hero');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
@@ -79,7 +79,7 @@ class HeroPolicy
      */
     public function restore(User $user, Hero $hero): bool
     {
-        return $user->can('restore_hero');
+        return $user->can('{{ Restore }}');
     }
 
     /**
@@ -87,7 +87,7 @@ class HeroPolicy
      */
     public function restoreAny(User $user): bool
     {
-        return $user->can('restore_any_hero');
+        return $user->can('{{ RestoreAny }}');
     }
 
     /**
@@ -95,7 +95,7 @@ class HeroPolicy
      */
     public function replicate(User $user, Hero $hero): bool
     {
-        return $user->can('replicate_hero');
+        return $user->can('{{ Replicate }}');
     }
 
     /**
@@ -103,6 +103,6 @@ class HeroPolicy
      */
     public function reorder(User $user): bool
     {
-        return $user->can('reorder_hero');
+        return $user->can('{{ Reorder }}');
     }
 }
