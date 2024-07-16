@@ -10,6 +10,9 @@
 
     @include('includes.style')
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <!-- Toastify CSS -->
     <link rel="stylesheet" href="{{ asset('src/css/toastify.min.css') }}">
     <!-- end Toastify CSS -->
@@ -460,11 +463,17 @@
                                         @enderror
                                     </div>
                                     <div class="flex-shrink w-full max-w-full md:w-1/2 px-4 mb-6">
-                                        <label class="inline-block mb-2" for="subject">Subject</label>
-                                        <input @error('subject') is-invalid @enderror type="text"
+                                        <label class="inline-block mb-2" for="service">Service</label>
+                                        <select @error('service') is-invalid @enderror
                                             class="w-full leading-5 relative py-3 px-5 rounded text-gray-800 bg-white border-b border-gray-100 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"
-                                            name="subject" id="subject">
-                                        @error('subject')
+                                            name="service" id="service">
+                                            <option value="">Select service</option>
+
+                                            @foreach ($services as $service)
+                                                <option value="{{ $service->title }}">{{ $service->title }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('service')
                                             <div class="validate">{{ $message }}</div>
                                         @enderror
                                     </div>
@@ -496,7 +505,6 @@
                                 </div>
                             </form>
                             <div id="response-message"></div>
-
                             <!-- end contact form -->
                         </div>
                     </div>

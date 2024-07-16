@@ -44,7 +44,7 @@ class ContactResource extends Resource
                     ->tel()
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('subject')
+                Forms\Components\TextInput::make('service')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('message')

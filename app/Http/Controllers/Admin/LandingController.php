@@ -39,7 +39,7 @@ class LandingController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phone_number' => 'required|string',
-            'subject' => 'required|string|max:255|unique:contacts',
+            'service' => 'required|string|max:255|unique:contacts',
             'message' => 'required|string|max:255|unique:contacts',
         ]);
 
@@ -48,7 +48,7 @@ class LandingController extends Controller
             $message->name = $request->name;
             $message->email = $request->email;
             $message->phone_number = $request->phone_number;
-            $message->subject = $request->subject;
+            $message->service = $request->service;
             $message->message = $request->message;
 
             $message->save();
