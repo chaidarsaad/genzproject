@@ -38,24 +38,24 @@ class LandingController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'phone_number' => 'required|string',
-            'service' => 'required|string|max:255|unique:contacts',
+            'phone_number' => 'required|string|max:20',
+            'service' => 'required|string|max:255',
             'message' => 'required|string|max:255|unique:contacts',
         ]);
 
         try {
             $message = new Contact();
-            $message->name = $request->name;
-            $message->email = $request->email;
-            $message->phone_number = $request->phone_number;
-            $message->service = $request->service;
-            $message->message = $request->message;
+            $message->name = $validatedData['name'];
+            $message->email = $validatedData['email'];
+            $message->phone_number = $validatedData['phone_number'];
+            $message->service = $validatedData['service'];
+            $message->message = $validatedData['message'];
 
             $message->save();
 
             return response()->json(['success' => true]);
         } catch (\Exception $e) {
-            return response()->json(['success' => false, 'error' => 'Failed to save message'], 500);
+            return response()->json(['success' => false, 'error' => $e->getMessage()], 500);
         }
     }
 }
